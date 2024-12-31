@@ -1,0 +1,72 @@
+body{
+    overflow: hidden;
+}
+
+[data-du="root"]{
+    display: grid;
+    width: 100%;
+    /* width: 100dvw; */
+    height: 100vh;
+    /* height: 100dvh; */
+    overflow: hidden;
+    
+    grid-template-rows: 50px 25px 1fr 1fr 2px;
+    grid-template-columns: 50px 220px 1fr 1fr 7px;
+
+    grid-template-areas: 
+    "header header header header header"
+    "pin-sidebar sidebar tabs tabs right-sidebar"
+    "pin-sidebar sidebar box-1 box-2 right-sidebar"
+    "pin-sidebar sidebar box-3 box-4 right-sidebar"
+    "footer footer footer footer footer";
+}
+
+[data-du="header"]{
+    grid-area: header;
+    background-color: #0e7ccf;
+}
+
+[data-du="tabs"]{
+    grid-area: tabs;
+    background: rgb(51, 51, 51);
+}
+
+
+[data-du="pin-sidebar"]{
+    grid-area: pin-sidebar;
+    /* background-color: Base/Base 16 */
+    background: rgb(51, 51, 51);
+}
+
+[data-du="sidebar"]{
+    grid-area: sidebar;
+    /* Base/Base 19 */
+    background: rgb(37, 37, 38);
+}
+
+[data-du="box-1"]{
+    grid-area: box-1;
+    background-color: #23f9ec;
+}
+[data-du="box-2"]{
+    grid-area: box-2;
+    background-color: #0309ec;
+}
+[data-du="box-3"]{
+    grid-area: box-3;
+    background-color: #d3f9ec;
+}
+[data-du="box-4"]{
+    grid-area: box-4;
+    background-color: #2ff9ec;
+}
+
+[data-du="right-sidebar"]{
+    grid-area: right-sidebar;
+    background: rgb(37, 37, 38);
+}
+
+[data-du="footer"]{
+    grid-area: footer;
+    background-color: #8ca0ff;
+}
